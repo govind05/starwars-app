@@ -1,32 +1,58 @@
-.App {
-  text-align: center;
+body {
+  background: #000;
+  height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.increment-btn {
+  border: 2px solid #ffd7005e;
+  background: #000;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 24px;
+  outline: none;
+  transition: border 0.3s ease, color 0.3s ease;
+  font-family: 'Courgette', cursive;
+  color: #ffd7005e;
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.increment-btn-up {
+  transform: translateY(-200px);
+  transition: transform 0.5s ease-out;
+}
+
+.increment-btn:hover {
+  color: #ffd700;
+  border: 2px solid #ffd700;
+}
+
+.char-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.char-info {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+  color: #ffd700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 700px) {
+  .increment-btn {
+    border: 2px solid #ffd700;
+    padding: 10px 14px;
+    font-size: 18px;
+    color: #ffd700;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .char-container {
+    font-size: 32px;
+    padding: 0px 16px;
+  }
+  .char-info {
+    font-size: 24px;
   }
 }
